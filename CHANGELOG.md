@@ -2,6 +2,11 @@
 
 All notable changes to this package are documented here. Format based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), versioning follows [SemVer](https://semver.org/).
 
+## [0.2.1] - 2026-05-11
+
+### Fixed
+- Added missing `.meta` files for `UIHorizontalSlideTransition`, `UIVerticalSlideTransition`, `UIPopInTransition`, `UIPopOutTransition` — without these Unity skipped the scripts when consuming the package via Git URL.
+
 ## [0.2.0] - 2026-05-11
 
 ### Added
