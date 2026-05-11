@@ -218,7 +218,7 @@ namespace MeDream.UI
         [FoldoutGroup("Transition"), Button("SetUpGenericTransition")]
         public void SetUpGenericTransition()
         {
-            SetUpTransitionType<GenericFadeIn, GenericFadeOut>();
+            SetUpTransitionType<UIFadeInTransition, UIFadeOutTransition>();
         }
 
         public void SetUpTransitionType<T1, T2>() where T1 : UITransition where T2 : UITransition

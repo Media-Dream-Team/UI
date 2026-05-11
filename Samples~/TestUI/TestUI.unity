@@ -1085,7 +1085,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9e8f57e56283d5d48acfe4270cd3f26c, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: MeDreamUI::MeDream.UI.transition.GenericFadeOut
+  m_EditorClassIdentifier: MeDreamUI::MeDream.UI.transition.UIFadeOutTransition
   canvasGroup: {fileID: 817760732}
   fadeDuration: 0.2
 --- !u!114 &817760734
@@ -1099,7 +1099,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b8cd2578f72762b44a405d4b7883b4eb, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: MeDreamUI::MeDream.UI.transition.GenericFadeIn
+  m_EditorClassIdentifier: MeDreamUI::MeDream.UI.transition.UIFadeInTransition
   canvasGroup: {fileID: 817760732}
   fadeDuration: 0.2
 --- !u!1 &961739749

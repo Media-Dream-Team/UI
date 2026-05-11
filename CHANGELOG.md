@@ -2,6 +2,16 @@
 
 All notable changes to this package are documented here. Format based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), versioning follows [SemVer](https://semver.org/).
 
+## [0.2.0] - 2026-05-11
+
+### Added
+- `UIHorizontalSlideTransition` / `UIVerticalSlideTransition` slide transitions (configurable start/end/duration/ease).
+- `UIPopInTransition` / `UIPopOutTransition` scale-pop transitions (configurable start/end scale/duration/ease).
+
+### Changed
+- **Breaking:** Renamed transition classes to `UI*Transition` convention. `GenericFadeIn` → `UIFadeInTransition`, `GenericFadeOut` → `UIFadeOutTransition`.
+- **Breaking:** Renamed folder `Runtime/Trasition` → `Runtime/Transition` (typo fix). Script GUIDs preserved so scene/prefab references remain intact.
+
 ## [0.1.0] - 2026-05-11
 
 ### Added

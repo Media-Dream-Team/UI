@@ -7,7 +7,7 @@ using UnityEngine.UI;
 
 namespace MeDream.UI.transition
 {
-    public class GenericFadeIn : UITransition
+    public class UIFadeInTransition : UITransition
     {
         [Title("Reference")]
         [SerializeField] private CanvasGroup canvasGroup;

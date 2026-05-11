@@ -5,7 +5,9 @@ Reusable UI view + transition primitives for Unity.
 - `IUIView` / `UIViewBase` — show/hide lifecycle with sync + async (UniTask) entry points and `WhenBeforeShow` / `WhenAfterShow` / `WhenBeforeHide` / `WhenAfterHide` hooks.
 - `UITransition` — abstract base for a single play-once transition (`PlayAsync`, `ResetTransition`, `SetupTransition`).
 - `UITransitionView` — `UIViewBase` that drives in/out `UITransition` components on a `CanvasGroup`, with cancellation-safe show/hide.
-- `GenericFadeIn` / `GenericFadeOut` — ready-to-use fade transitions.
+- `UIFadeInTransition` / `UIFadeOutTransition` — ready-to-use fade transitions.
+- `UIHorizontalSlideTransition` / `UIVerticalSlideTransition` — slide-in/out by anchored position.
+- `UIPopInTransition` / `UIPopOutTransition` — scale-based pop transitions.
 
 ## Install
 
@@ -34,7 +36,7 @@ https://github.com/Media-Dream-Team/UI.git#v0.1.0
 This package does **not** declare these in `package.json` because they ship via Git URL or as paid assets:
 
 - **UniTask** — `https://github.com/Cysharp/UniTask.git?path=src/UniTask/Assets/Plugins/UniTask`
-- **DOTween** — Asset Store (required by `GenericFadeIn` / `GenericFadeOut`)
+- **DOTween** — Asset Store (required by built-in transitions: `UIFadeInTransition`, `UIFadeOutTransition`, `UIHorizontalSlideTransition`, `UIVerticalSlideTransition`, `UIPopInTransition`, `UIPopOutTransition`)
 - **Odin Inspector** — Asset Store (used by `UITransitionView` for editor UI)
 
 ## Samples
