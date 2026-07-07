@@ -2,6 +2,11 @@
 
 All notable changes to this package are documented here. Format based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), versioning follows [SemVer](https://semver.org/).
 
+## [0.3.0] - 2026-07-07
+
+### Added
+- Optional fade to `UIHorizontalSlideTransition`, `UIVerticalSlideTransition`, `UIPopInTransition`, and `UIPopOutTransition`. Enable via `enableFade` to cross-fade a `CanvasGroup` from `startAlpha` to `endAlpha` alongside the slide/pop, sharing the transition's duration and ease.
+
 ## [0.2.1] - 2026-05-11
 
 ### Fixed

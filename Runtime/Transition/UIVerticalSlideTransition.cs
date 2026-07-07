@@ -17,12 +17,21 @@ namespace MeDream.UI.transition
         [SerializeField] private float duration = 0.3f;
         [SerializeField] private Ease ease = Ease.OutCubic;
 
+        [Title("Fade")]
+        [SerializeField] private bool enableFade = false;
+        [SerializeField, ShowIf("enableFade")] private CanvasGroup canvasGroup;
+        [SerializeField, ShowIf("enableFade")] private float startAlpha = 0f;
+        [SerializeField, ShowIf("enableFade")] private float endAlpha = 1f;
+
         public override void SetupTransition()
         {
             if (target == null) return;
             var pos = target.anchoredPosition;
             pos.y = startY;
             target.anchoredPosition = pos;
+
+            if (enableFade && canvasGroup != null)
+                canvasGroup.alpha = startAlpha;
         }
 
         public override void ResetTransition()
@@ -31,6 +40,9 @@ namespace MeDream.UI.transition
             var pos = target.anchoredPosition;
             pos.y = startY;
             target.anchoredPosition = pos;
+
+            if (enableFade && canvasGroup != null)
+                canvasGroup.alpha = startAlpha;
         }
 
         public override async UniTask PlayAsync(CancellationToken cancellationToken)
@@ -44,6 +56,13 @@ namespace MeDream.UI.transition
             var pos = target.anchoredPosition;
             pos.y = startY;
             target.anchoredPosition = pos;
+
+            Tween fadeTween = null;
+            if (enableFade && canvasGroup != null)
+            {
+                canvasGroup.alpha = startAlpha;
+                fadeTween = canvasGroup.DOFade(endAlpha, duration).SetEase(ease);
+            }
 
             try
             {
@@ -60,6 +79,10 @@ namespace MeDream.UI.transition
                 var finalPos = target.anchoredPosition;
                 finalPos.y = endY;
                 target.anchoredPosition = finalPos;
+
+                fadeTween?.Kill();
+                if (enableFade && canvasGroup != null)
+                    canvasGroup.alpha = endAlpha;
             }
 
             await UniTask.CompletedTask;
